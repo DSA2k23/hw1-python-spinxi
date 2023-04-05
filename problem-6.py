@@ -1,4 +1,4 @@
-def sheamowme(target, arr):
+def sheamowme(arr, target):
     count = 0
     meore_arr = []
     for num in arr:
@@ -10,4 +10,5 @@ def sheamowme(target, arr):
             count += 1
         meore_arr.append(num)
     return count
-print(sheamowme(6,arr=[1, 7,  7, -1, 5]))
+n = int(input())
+print(sheamowme(list(map(int, input().split())), int(input())))

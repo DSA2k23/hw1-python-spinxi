@@ -42,7 +42,7 @@ def sheamowme(arr):
     else:
         return "NO"
 
-n = int(input())
+# n = int(input())
 arr = list(map(int, input().split()))
 res = sheamowme(arr)
 print(res)

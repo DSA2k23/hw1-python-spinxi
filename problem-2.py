@@ -11,4 +11,4 @@ def atobitidan_samobiti(num):
             #რიცხვი გავყოთ სამზე და ახლა ამ დარჩენილზე იგივე წავიდა სანამ 0 არ უდრის
             num = num // 3
         return samobiti
-print(atobitidan_samobiti(100))
+print(atobitidan_samobiti(int(input())))

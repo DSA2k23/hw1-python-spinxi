@@ -20,22 +20,25 @@
 
 
 def sheamowme(arr):
-    #მთლიანი ჯამი
-    total_sum = 0
-    #მარცხენა ჯამი
-    left_sum = 0
-    #გავიგოთ მთლიანი ჯამი
-    for i in range(len(arr)):
-        total_sum += arr[i]
-    #გავიგოთ მარცხენას ჯამი ტოლია თუარა მთლიანს გამოკლებული მარცხენა და ელემენტი რომელზეც ვართ
-    for i in range(len(arr)):
-        #თუ უდრის ეგაა
-        if left_sum == total_sum - left_sum - arr[i]:
-            return f"YES SIR WE HAVE NUMBER:INDEX ==> {arr[i]}:{i}"
-        #თუ იფში არ შევა დავამატოთ მარცხენას ყველა ელემენტი
-        left_sum += arr[i]
-    #თუ არა არა
-    return "NO"
+    if(len(arr) >=3):
+        #მთლიანი ჯამი
+        total_sum = 0
+        #მარცხენა ჯამი
+        left_sum = 0
+        #გავიგოთ მთლიანი ჯამი
+        for i in range(len(arr)):
+            total_sum += int(arr[i])
+        #გავიგოთ მარცხენას ჯამი ტოლია თუარა მთლიანს გამოკლებული მარცხენა და ელემენტი რომელზეც ვართ
+        for i in range(len(arr)):
+            #თუ უდრის ეგაა
+            if left_sum == total_sum - left_sum - int(arr[i]):
+                return f"YES SIR WE HAVE NUMBER:INDEX ==> {arr[i]}:{i}"
+            #თუ იფში არ შევა დავამატოთ მარცხენას ყველა ელემენტი
+            left_sum += int(arr[i])
+        #თუ არა არა
+        return "NO"
+    else:
+        return "NO"
 
 
 arr_nums = (input("შემოიტანე მასივი: "))
@@ -43,9 +46,8 @@ arr = []
 
 elements = arr_nums.split(' ')
 for element in elements:
-    arr.append(int(element))
+    arr.append((element))
 res = sheamowme(arr)
 print(res)
-
 
 

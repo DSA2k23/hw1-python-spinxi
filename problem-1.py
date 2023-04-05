@@ -10,7 +10,7 @@
 #     for i in range(len(arr)):
 #         #თუ უდრის ეგაა
 #         if left_sum == total_sum - left_sum - arr[i]:
-#             return f"YES SIR WE HAVE NUMBER:INDEX ==> {arr[i]}:{i}"
+#             return "YES"
 #         #თუ იფში არ შევა დავამატოთ მარცხენას ყველა ელემენტი
 #         left_sum += arr[i]
 #     #თუ არა არა
@@ -32,7 +32,7 @@ def sheamowme(arr):
         for i in range(len(arr)):
             #თუ უდრის ეგაა
             if left_sum == total_sum - left_sum - int(arr[i]):
-                return f"YES SIR WE HAVE NUMBER:INDEX ==> {arr[i]}:{i}"
+                return "YES"
             #თუ იფში არ შევა დავამატოთ მარცხენას ყველა ელემენტი
             left_sum += int(arr[i])
         #თუ არა არა
@@ -40,13 +40,8 @@ def sheamowme(arr):
     else:
         return "NO"
 
-
-arr_nums = (input("შემოიტანე მასივი: "))
-arr = []
-
-elements = arr_nums.split(' ')
-for element in elements:
-    arr.append((element))
+n = int(input())
+arr = list(map(int, input().split()))
 res = sheamowme(arr)
 print(res)
 

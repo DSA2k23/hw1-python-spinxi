@@ -38,7 +38,7 @@ def sheamowme(arr):
         #თუ არა არა
         return "NO"
     else:
-        return "NO"
+        return "YES"
 
 n = int(input())
 arr = list(map(int, input().split()))

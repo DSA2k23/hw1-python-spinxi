@@ -38,11 +38,14 @@ def sheamowme(arr):
     return "NO"
 
 
-arr_size = int(input("ერეის საიზი შემოიტანე: "))
+arr_nums = (input("შემოიტანე მასივი: "))
 arr = []
-for i in range(arr_size):
-    arr_nums = int(input(f"შემოიტანე {i+1} რიცხვი: "))
-    arr.append(arr_nums)
-print(sheamowme(arr))
+
+elements = arr_nums.split(' ')
+for element in elements:
+    arr.append(int(element))
+res = sheamowme(arr)
+print(res)
+
 
 
